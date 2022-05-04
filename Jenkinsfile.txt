@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    environment {
+        PROJECT_NAME = "neptun"
+        OWNER_NAME = "art.giz"
+    }
+
+    stages {
+        stage('1-Build') {
+            steps {
+                echo 'start'
+                echo 'building....'
+                echo 'finish'
+            }
+        }
+        stage('2-Test') {
+            steps {
+                echo 'start'
+                echo 'testing....'
+                echo 'finish'
+            }
+        }
+        stage('3-Deploy') {
+            steps {
+                echo 'start'
+                echo 'deploying....'
+                echo 'finish'
+            }
+        }
+        stage('4-Celebrate') {
+            steps {
+                echo "Yay!!! ${OWNER_NAME}"
+            }
+        }
+    }
+}
